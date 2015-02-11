@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="1610" Guid="{D6FA40B2-F332-4564-9733-D98C744EE8BD}" Time="1423678054.71">
+    <Autostart Name="Autostart" Expanded="True">
+        <Plugin Enabled="False" Identifier="MCE_Vista" Guid="{A7DB04BB-9F0A-486A-BCA1-CA87B9620D54}" File="MceRemote_Vista">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" Identifier="MediaPortal" Guid="{50B10A24-77AC-4248-85E5-16A04983170E}" File="MediaPortal">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" Identifier="DesktopRemote" Guid="{5DFFBD61-7582-4D6F-8EA9-9CB36284C9CF}" File="DesktopRemote">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" Identifier="WMPlayer" Guid="{87D26B8D-990C-457C-85C2-8D634868E1D2}" File="WMPlayer">
+            gAIpLg==
+        </Plugin>
+        <Plugin Identifier="SysTrayMenu" Guid="{842BFFE8-DCB9-4C72-9877-AB2EF49794C5}" File="SysTrayMenu">
+            gAJdcQAoKFgJAAAALS0tLS0tLS0tcQFVCXNlcGFyYXRvcnECWAAAAABxA0sLdHEEKFgIAAAAVFYgUG93ZXJxBVUEaXRlbXEGWBMAAABNY2VSZW1vdGUuTWNlLlBvd2VycQdLAXRxCChYCQAAAFllcyBQb3dlcnEJVQRpdGVtcQpYCwAAAFllcy5Qb3dlck9ucQtLCHRxDChYCQAAAC0tLS0tLS0tLXENVQlzZXBhcmF0b3JxDmgDSwJ0cQ8oWCEAAABUViBPTiAtPiBBViAtPiBwb3dlciBZRVMgLT4gY2ggMTBxEGgGWBEAAABDb21ib3MuUG93ZXJUVisxMHERSwN0cRIoWCEAAABUViBPTiAtPiBBViAtPiBwb3dlciBZRVMgLT4gY2ggMjJxE2gGWBEAAABDb21ib3MuUG93ZXJUVisyMnEUSwR0cRUoWCUAAABIRE1JIC0+IFBvd2VyIE9mZiBUViAtPiBQb3dlciBPZmYgWWVzcRZVBGl0ZW1xF1gjAAAAQ29tYm9zLlJldHVybi10by1oZG1pK3Bvd2VyLW9mZi1hbGxxGEsOdHEZKFgJAAAALS0tLS0tLS0tcRpoAmgDSwV0cRsoWAUAAABDaCAxMHEcaApYCQAAAENvbWJvcy4xMHEdSwd0cR4oWAUAAABDaCAyMnEfaApYCQAAAENvbWJvcy4yMnEgSwZ0cSEoWAUAAABDaCA1NnEiaBdYCQAAAENvbWJvcy41NnEjSw10cSQoWAkAAAAtLS0tLS0tLS1xJVUJc2VwYXJhdG9ycSZoA0sPdHEnKFgNAAAAWWVzIFZvbCArICogNXEoVQRpdGVtcSlYDQAAAENvbWJvcy41KnZvbCtxKksQdHErKFgNAAAAWWVzIFZvbCAtICogNXEsaClYDQAAAENvbWJvcy41KnZvbC1xLUsRdHEuKFgPAAAAWWVzIFRvZ2dsZSBNdXRlcS9oKVgIAAAAWWVzLk11dGVxMEsSdHExKFgJAAAALS0tLS0tLS0tcTJoAmgDSwl0cTMoWAsAAABBViA8LT4gSERNSXE0aApYEwAAAE1haW4udG9nZ2xlIGhkbWktdHZxNUsKdHE2KFgJAAAALS0tLS0tLS0tcTdoAmgDSwx0cTgoWA0AAABuZXh0IGVwaXNvZGVzcTlVBGl0ZW1xOlgMAAAAbmV4dEVwaXNvZGVzcTtLFHRxPGWFcT0u
+        </Plugin>
+        <Plugin Identifier="DirectoryWatcher" Guid="{003FABA6-AA6A-4395-9DB6-DC88EB07F5FE}" File="DirectoryWatcher">
+            gAJYEAAAAEU6XFRFTVBcQ29tcGxldGVxAIiGcQEu
+        </Plugin>
+        <Plugin Identifier="Keyboard" Guid="{59CBD10F-C1D8-4ADB-999B-9B76BA360F1F}" File="Keyboard">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" Identifier="XBMC" Guid="XBMC" File="XBMC">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" Identifier="Timer" Guid="{6149CA99-1FCD-4450-9160-7543BC20CFD3}" File="Timer">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" Identifier="NetworkReceiver" Guid="{8F35AE6D-AF12-4A94-AA91-4B63F0CBBE1C}" File="NetworkReceiver">
+            gAJNAARYBAAAADQwNTlxAFgDAAAAVENQcQGHcQIu
+        </Plugin>
+        <Action Enabled="False">
+            Timer.TimerAction(u'restart mce ir ', 0, 0, 60.0, u'restart mce service', False, True, 0, u'00:00:00')
+        </Action>
+    </Autostart>
+    <Folder Name="torrent handling" Expanded="True">
+        <Macro Name="unrar new torrents and move the the series folder" Expanded="True">
+            <Event Name="DirectoryWatcher.Created" />
+            <Action Name="unraring the last modified dir">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import os\nimport datetime\nimport shutil\n#----------------------------------------------------------------------------------#\n# start logging\nlog_file="E:\\\\auto-extractor-log.txt"\nlogfile = open(log_file, \'a\')\n\nnow = datetime.datetime.now()\nnow_string = now.strftime("%Y-%m-%d %H:%M:%S")\n\nlogfile.write(now_string + " new item was found in completed directory\\n")\n#----------------------------------------------------------------------------------#\n\n# return an array contains each line for the file in cell\ndef file_to_array(file_path):\n\tfile=open(file_path,\'r\')\n\tfirst_line=file.readline()\n\tfirst_line=first_line.rstrip(\'\\n\')\n\tarray=[first_line]\n\tfor line in file.readlines():\n\t\tarray.append(line.rstrip(\'\\n\'))\n\t\n\tfile.close()\n\treturn array\n\n\t\n\nsource_dir = "E:\\TEMP\\Complete"\ndest_dir = "E:\\\\TEMP\\\\Unsorted"\nfiles=os.listdir(source_dir)\n\nrar_files_list_file="E:\\\\TEMP\\\\done_list.txt"\nrared_files_list=file_to_array(rar_files_list_file)\n\nfor file in files:\n    if(rared_files_list.count(file) == 0):        \n        file_full_path=os.path.join(source_dir,file)\n        if(file.endswith(\'mkv\') or file.endswith(\'avi\')):\n            print \'here\'\n            shutil.copy(file_full_path,dest_dir)\n            # end logging\n            now = datetime.datetime.now()\n            now_string = now.strftime("%Y-%m-%d %H:%M:%S")\n            logfile.write(now_string + " the file \\n   " + file + "\\nwas copied to " + dest_dir + "\\n")\n        else:\n            str_to_run="c:\\unrar.exe.lnk e -y " + file_full_path + " " + dest_dir\n            os.system(str_to_run)\n            \n            # end logging\n            now = datetime.datetime.now()\n            now_string = now.strftime("%Y-%m-%d %H:%M:%S")\n            logfile.write(now_string + " the command:\\n   " + str_to_run + "\\nwas run to extract the directory." + "\\n")\n            \n        # write to done file that another file is done :\n        rars_file=open(rar_files_list_file,\'a\')\n        rars_file.write(file+\'\\n\')\n        rars_file.close()\n\nlogfile.close()\n#----------------------------------#\n')
+            </Action>
+            <Action Name="moving the unrared file to its series dir">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import os\nimport string\nimport shutil\nimport datetime\nimport sys\n\n\n#----------------------------------------------------------------------------------#\n# start logging\nlog_file="E:\\\\auto-extractor-log.txt"\nlogfile = open(log_file, \'a\')\n\nnow = datetime.datetime.now()\nnow_string = now.strftime("%Y-%m-%d %H:%M:%S")\nlogfile.write("-----------------------------------------------------------------------------------------------------------------\\n")\n\nlogfile.write(now_string + " new file found in unsorted directory\\n")\n#----------------------------------------------------------------------------------#\n\n\n#--------------------------------------------------------------#\n# building the string for the path of source file to move \nsource_dir = "E:\\TEMP\\Unsorted"\ntry:\n    episode = os.listdir(source_dir)[0]\nexcept IndexError:\n    logfile.write(now_string + " there is no file in the unsorted dir, maybe unrar was unsuccessful - exiting\\n")\n    logfile.write("=================================================================================================================\\n")\n    logfile.close()\n    sys.exit()\n\nsource_file = source_dir + "\\\\" + episode\n\n#--------------------------------------------------------------#\n\n#------------------------------------------------------------------------------------------------------#\n# building the string for the path of the dest folder to move the source file into\n\nseries_base_dir = "E:\\TV Series"\n\ndest_series_with_dots = episode[:episode.rfind(\'.S\')]\ndest_series_without_dots = dest_series_with_dots.replace("."," ")\ndest_series_dir = series_base_dir + \'\\\\\' + dest_series_without_dots\n\n# check if the dir really exist ( parsing succedded )\ntry:\n    os.chdir(dest_series_dir)\nexcept:\n    # ok , so we will try to parse with lower case \'s\'\n    dest_series_with_dots = episode[:episode.rfind(\'.s\')]\n    dest_series_without_dots = dest_series_with_dots.replace("."," ")\n    dest_series_dir = series_base_dir + \'\\\\\' + dest_series_without_dots\n    try:\n        os.chdir(dest_series_dir)\n    except:\n        no_match_dir="E:\\\\TEMP\\\\no_match"\n        logfile.write("parse error - there is no dir named " + dest_series_dir +"\\n")\n        logfile.write("moving the file to " + no_match_dir + " directory in order to stay with clean unsorted dir\\n")\n        shutil.move(source_file,no_match_dir)\n        logfile.write("=================================================================================================================\\n")\n        logfile.close()\n        sys.exit()\n \n\n\n# returns the last in the array sorted alphbeticly, i.e : season 5 is after season 2 alphbeticlly. \n# pop gives the last value in the array .\n\nlatest_season_dir=os.listdir(dest_series_dir).pop()\ndest_dir=dest_series_dir + "\\\\" + latest_season_dir\n#------------------------------------------------------------------------------------------------------#\n\n\n#----------------------------------#\n# moving the file\ntry:\n    shutil.move(source_file,dest_dir)\nexcept:\n    logfile.write("the file:\\n   " + source_file + "\\ncould not be moved to the directory:\\n   "+ dest_dir + "\\n")\n    logfile.write("maybe already exists there?\\n")\n    os.remove(source_file)\n    logfile.write("the file has been removed ( rar files still there in completed dir... )\\n")\n    logfile.write("=================================================================================================================\\n")\n    logfile.close()\n    sys.exit()\n\n#----------------------------------#\n# end logging\nnow = datetime.datetime.now()\nnow_string = now.strftime("%Y-%m-%d %H:%M:%S")\nlogfile.write(now_string + " the file:\\n   " + source_file + "\\nwas moved to directory:\\n   " + dest_dir + "\\n")\nlogfile.write("=================================================================================================================\\n")\nlogfile.close()')
+            </Action>
+        </Macro>
+        <Macro Name="clean the complete list whenever the complete dir is empty" Expanded="True">
+            <Event Name="DirectoryWatcher.Deleted" />
+            <Action Name="check if the complete dir is empty - if so - clean the complete list file and move the log file to history file">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import os\nimport datetime\n#----------------------------------------------------------------------------------#\n\nsource_dir = "E:\\TEMP\\Complete"\nfiles=os.listdir(source_dir)\n\nif (files.__len__()==0):\n    rar_files_list_file="E:\\\\TEMP\\\\done_list.txt"\n    # openning the file for writing and closing it causes the file to be empty: \n    open(rar_files_list_file,\'w\').close()\n    \n    # now we will take all the auto-extractor-log file lines and put it on the history-log file\n    log_file="E:\\\\auto-extractor-log.txt"\n    history_log_file="E:\\\\TEMP\\history-log.txt"\n    \n    logfile = open(log_file, \'r\')\n    historyfile = open(history_log_file, \'a\')\n    for line in logfile.readlines():\n        historyfile.write(line)\n    \n    logfile.close()\n    historyfile.close()\n    # empty the log file \n    open(log_file,\'w\').close()\n    \n    # log that the history was saved to history log file and the done_list file was cleaned\n    logfile = open(log_file, \'a\')\n    now = datetime.datetime.now()\n    now_string = now.strftime("%Y-%m-%d %H:%M:%S")\n    logfile.write(now_string + " complete dir is empty \\n   cleaning the done_list file and roatating the log file to history file \\n")\n    logfile.write("=================================================================================================================\\n")\n    logfile.close()\n\n#----------------------------------#\n')
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="MCE Global Events" Enabled="False">
+        <Macro Name="computer standby ( causes TV blue screen and power off after 5 min ) by Power">
+            <Event Name="MceRemote.Mce.Power" />
+            <Action>
+                System.MonitorPowerOff()
+            </Action>
+        </Macro>
+        <Macro Name="tv/av one click by Red">
+            <Event Name="MceRemote.Mce.Red" />
+            <Event Name="DesktopRemote.AV" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="TV sleep by Pound" Enabled="False">
+            <Event Name="MceRemote.Mce.Pound" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014A 00A5 0016 0012 0016 0014 0014 0014 0016 0014 0014 0014 0016 0012 0018 0012 0016 0014 0014 003E 0014 003D 0018 003D 0014 003E 0014 003D 0018 003D 0014 003E 0014 0014 0016 0012 0016 0014 0016 0014 0014 0014 0016 003D 0016 0012 0016 003E 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 0012 0016 003E 0014 0014 0016 003D 0016 05E0 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="kill XBMC by recordedTV">
+            <Event Name="MceRemote.Mce.Recorded_TV" />
+            <Action Name="Python Script for killing XBMC">
+                EventGhost.PythonScript(u'import wmi\nimport win32api\nimport subprocess\nc = wmi.WMI ()\ntry:\n    for process in c.Win32_Process (caption="XBMC.exe"):\n        process.Terminate ()\nexcept win32api.error:\n\tprint "error"')
+            </Action>
+        </Macro>
+        <Macro Name="start xbmc by Start">
+            <Event Name="MceRemote.Mce.Start" />
+            <Action>
+                System.MonitorPowerOn()
+            </Action>
+            <Action>
+                System.Execute(u'D:\\Program Files (x86)\\XBMC\\XBMC.exe', u'', 0, False, 2, u'', False)
+            </Action>
+        </Macro>
+        <Macro Name="alt + tab by Teletext">
+            <Event Name="MceRemote.Mce.Teletext" />
+            <Action>
+                Window.SendKeys(u'{Alt+Tabulator}', False)
+            </Action>
+        </Macro>
+        <Macro Name="fire toggle tv-hdmi action by Green">
+            <Event Name="MceRemote.Mce.Green" />
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name='emulate "A" by 2 - for adding a page to scanning.'>
+            <Event Name="MceRemote.Mce.Num2" />
+            <Action>
+                Window.SendKeys(u'A', False)
+            </Action>
+        </Macro>
+        <Macro Name="windows mute by Clear button">
+            <Event Name="MceRemote.Mce.Escape" />
+            <Action>
+                System.ToggleMute(0)
+            </Action>
+        </Macro>
+        <Macro Name="kill media player by Guide">
+            <Event Name="MceRemote.Mce.Guide" />
+            <Action>
+                Window.FindWindow(u'wmplayer.exe', None, None, None, None, None, False, 0.0, 0)
+            </Action>
+            <Action>
+                Window.Close()
+            </Action>
+        </Macro>
+        <Folder Name="Toggle yes remote and media portal remote">
+            <Macro Name="yes on" id="342" Expanded="True">
+                <Event Name="MceRemote.Mce.Record" />
+                <Action>
+                    EventGhost.EnableItem(XmlIdLink(522))
+                </Action>
+                <Action>
+                    EventGhost.DisableItem(XmlIdLink(361))
+                </Action>
+                <Action>
+                    EventGhost.EnableExclusive(XmlIdLink(347))
+                </Action>
+            </Macro>
+            <Macro Name="MP on" id="347" Enabled="False" Expanded="True">
+                <Event Name="MceRemote.Mce.Record" />
+                <Action>
+                    EventGhost.EnableItem(XmlIdLink(361))
+                </Action>
+                <Action>
+                    EventGhost.DisableItem(XmlIdLink(522))
+                </Action>
+                <Action>
+                    EventGhost.EnableExclusive(XmlIdLink(342))
+                </Action>
+            </Macro>
+        </Folder>
+        <Macro Name="ch - = computer vol-">
+            <Event Name="MceRemote.Mce.ChannelDown" />
+            <Action>
+                System.ChangeMasterVolumeBy(-3.0, 0)
+            </Action>
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.070000000000000007, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="ch + = computer vol+">
+            <Event Name="MceRemote.Mce.ChannelUp" />
+            <Action>
+                System.ChangeMasterVolumeBy(3.0, 0)
+            </Action>
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.070000000000000007, 3.0)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Combos" Enabled="False">
+        <Macro Name="Power On TV , go to av , power on yes , go to ch 10">
+            <Event Name="Combos.PowerTV+10" />
+            <Action Name="power on TV">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(20.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+            <Action Name="power on Yes">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(3.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.1', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.0', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Power On TV , go to av , power on yes , go to ch 22">
+            <Event Name="Combos.PowerTV+22" />
+            <Action Name="power on TV">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(20.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+            <Action Name="power on Yes">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(3.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="go to hdmi ,Power Off TV, power Off yes">
+            <Event Name="Combos.Return-to-hdmi+power-off-all" />
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+            <Action Name="power off TV">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+            <Action Name="power off Yes">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="go to ch 10">
+            <Event Name="Combos.10" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.1', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.0', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="go to ch 22">
+            <Event Name="Combos.22" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="go to ch 56">
+            <Event Name="Combos.56" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.5', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.6', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="one av/tv">
+            <Event Name="Combos.ONE_AV" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="vol + * 5">
+            <Event Name="Combos.5*vol+" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="vol - * 5">
+            <Event Name="Combos.5*vol-" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Windows Media Player" Enabled="False">
+        <Macro Name="Toggle Play">
+            <Event Name="MceRemote.Mce.Pause" />
+            <Event Name="MceRemote.Mce.Play" />
+            <Action>
+                WMPlayer.TogglePlay()
+            </Action>
+        </Macro>
+        <Macro Name="Stop">
+            <Event Name="MceRemote.Mce.Stop" />
+            <Action>
+                WMPlayer.Stop()
+            </Action>
+        </Macro>
+        <Macro Name="Previous Track">
+            <Event Name="MceRemote.Mce.Replay" />
+            <Action>
+                WMPlayer.PreviousTrack()
+            </Action>
+        </Macro>
+        <Macro Name="Next Track">
+            <Event Name="MceRemote.Mce.Skip" />
+            <Action>
+                WMPlayer.NextTrack()
+            </Action>
+        </Macro>
+        <Macro Name="Fast Forward">
+            <Action>
+                WMPlayer.FastForward()
+            </Action>
+        </Macro>
+        <Macro Name="Rewind">
+            <Action>
+                WMPlayer.FastRewind()
+            </Action>
+        </Macro>
+        <Macro Name="Volume Up">
+            <Event Name="MceRemote.Mce.VolumeUp" />
+            <Action>
+                WMPlayer.VolumeUp()
+            </Action>
+        </Macro>
+        <Macro Name="Volume Down">
+            <Event Name="MceRemote.Mce.VolumeDown" />
+            <Action>
+                WMPlayer.VolumeDown()
+            </Action>
+        </Macro>
+        <Macro Name="Toggle Mute">
+            <Event Name="MceRemote.Mce.Mute" />
+            <Action>
+                WMPlayer.ToggleMute()
+            </Action>
+        </Macro>
+        <Macro Name="Toggle Shuffle">
+            <Action>
+                WMPlayer.ToggleShuffle()
+            </Action>
+        </Macro>
+        <Macro Name="Toggle Repeat">
+            <Action>
+                WMPlayer.ToggleRepeat()
+            </Action>
+        </Macro>
+        <Macro Name="Now Playing">
+            <Action>
+                WMPlayer.NowPlaying()
+            </Action>
+        </Macro>
+        <Macro Name="Library">
+            <Action>
+                WMPlayer.Library()
+            </Action>
+        </Macro>
+        <Macro Name="Fullscreen">
+            <Event Name="MceRemote.Mce.Ok" />
+            <Action>
+                WMPlayer.Fullscreen()
+            </Action>
+        </Macro>
+        <Macro Name="Exit">
+            <Action>
+                WMPlayer.Exit()
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="restart mce service on timer" Enabled="False">
+        <Macro Name="restart mce service" Expanded="True">
+            <Event Name="Timer.restart mce service" />
+            <Action>
+                EventGhost.PythonScript(u'import win32serviceutil\n \nserviceName = "AlternateMceIrService"\n \nwin32serviceutil.RestartService(serviceName)\n')
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="RSS next episodes on TV screen">
+        <Macro Name="get next episodes" id="898" Enabled="False" Expanded="True">
+            <Event Name="MceRemote.Mce.LiveTV" />
+            <Action>
+                EventGhost.ShowOSD(u"           Ori &amp; Yifah's \nFavorite TV Shows Schedule\n          Now Loading . . .\n\n\xae   created by Ori Danus    \xae", u'0;-64;0;0;0;400;0;0;0;0;3;2;1;34;Arial Narrow', (255, 255, 255), (0, 0, 0), 4, (8, 48), 0, 0.0, True)
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import feedparser\n\npython_wiki_rss_url = "http://next-episode.net/watchlist.xml?user=oridanus&amp;k=c56a5adcf33d84ad33d9e2f23ed82e28"\nfeed = feedparser.parse( python_wiki_rss_url )\neg.globals.allEpisods = "";\nfor entry in feed[\'entries\']:    \n    eg.globals.allEpisods += entry.title + "\\n"\n\neg.globals.allEpisods = eg.globals.allEpisods.replace(\'In 1 days\', \'Tomorrow\')\nprint eg.globals.allEpisods')
+            </Action>
+            <Action>
+                EventGhost.ShowOSD(u'{eg.globals.allEpisods}', u'0;-64;0;0;0;400;0;0;0;0;3;2;1;34;Arial Narrow', (255, 255, 255), (0, 0, 0), 4, (8, 48), 0, 0.0, True)
+            </Action>
+            <Action>
+                EventGhost.EnableExclusive(XmlIdLink(904))
+            </Action>
+        </Macro>
+        <Macro Name="clear it" id="904" Expanded="True">
+            <Event Name="MceRemote.Mce.LiveTV" />
+            <Action>
+                EventGhost.ShowOSD(u'{eg.globals.allEpisods}', u'0;-64;0;0;0;400;0;0;0;0;3;2;1;34;Arial Narrow', (255, 255, 255), (0, 0, 0), 4, (8, 48), 0, 0.01, True)
+            </Action>
+            <Action>
+                EventGhost.EnableExclusive(XmlIdLink(898))
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="RSS next episodes on comupter screen">
+        <Macro Name="get next episodes" id="909" Expanded="True">
+            <Event Name="SysTrayMenu.nextEpisodes" />
+            <Action>
+                EventGhost.ShowOSD(u"           Ori &amp; Yifah's \nFavorite TV Shows Schedule\n          Now Loading . . .\n\n\xae   created by Ori Danus    \xae", u'0;-64;0;0;0;400;0;0;0;0;3;2;1;34;Arial Narrow', (255, 255, 255), (0, 0, 0), 4, (8, 48), 1, 0.0, True)
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import feedparser\n\npython_wiki_rss_url = "http://next-episode.net/watchlist.xml?user=oridanus&amp;k=c56a5adcf33d84ad33d9e2f23ed82e28"\nfeed = feedparser.parse( python_wiki_rss_url )\neg.globals.allEpisods = "";\nfor entry in feed[\'entries\']:    \n    eg.globals.allEpisods += entry.title + "\\n"\n\neg.globals.allEpisods = eg.globals.allEpisods.replace(\'In 1 days\', \'Tomorrow\')\nprint eg.globals.allEpisods')
+            </Action>
+            <Action>
+                EventGhost.ShowOSD(u'{eg.globals.allEpisods}', u'0;-64;0;0;0;400;0;0;0;0;3;2;1;34;Arial Narrow', (255, 255, 255), (0, 0, 0), 4, (8, 48), 1, 0.0, True)
+            </Action>
+            <Action>
+                EventGhost.EnableExclusive(XmlIdLink(915))
+            </Action>
+        </Macro>
+        <Macro Name="clear it" id="915" Enabled="False" Expanded="True">
+            <Event Name="SysTrayMenu.nextEpisodes" />
+            <Action>
+                EventGhost.ShowOSD(u'{eg.globals.allEpisods}', u'0;-64;0;0;0;400;0;0;0;0;3;2;1;34;Arial Narrow', (255, 255, 255), (0, 0, 0), 4, (8, 48), 1, 0.01, True)
+            </Action>
+            <Action>
+                EventGhost.EnableExclusive(XmlIdLink(909))
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="toggle main screen" Expanded="True">
+        <Macro Name="Set Comupter Display Main" id="920" Enabled="False" Expanded="True">
+            <Event Name="Keyboard.LCtrl+LAlt+D" />
+            <Action>
+                System.SetDisplayPreset((u'\\\\.\\DISPLAY1', 1920, 0, 1920L, 1080L, 60L, 32L, True, False, 0L), (u'\\\\.\\DISPLAY2', 0, 0, 1920L, 1080L, 60L, 32L, True, True, 0L))
+            </Action>
+            <Action>
+                EventGhost.EnableExclusive(XmlIdLink(924))
+            </Action>
+        </Macro>
+        <Macro Name="Set TV Display Preset" id="924" Expanded="True">
+            <Event Name="Keyboard.LCtrl+LAlt+D" />
+            <Action>
+                System.SetDisplayPreset((u'\\\\.\\DISPLAY1', 0, 0, 1920L, 1080L, 60L, 32L, True, True, 0L), (u'\\\\.\\DISPLAY2', -1920, 0, 1920L, 1080L, 60L, 32L, True, False, 0L))
+            </Action>
+            <Action>
+                EventGhost.EnableExclusive(XmlIdLink(920))
+            </Action>
+        </Macro>
+    </Folder>
+</EventGhost>

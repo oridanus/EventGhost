@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Name="Configuration Tree" Expanded="True" Version="1262" Guid="{E399EDE6-3350-4BFD-8BE0-574E85D1F54A}" Time="1290022977.22">
+    <Autostart Name="Autostart" Expanded="True">
+        <Plugin File="MceRemote_Vista" Identifier="MCE_Vista">
+            gAIpLg==
+        </Plugin>
+        <Plugin File="MediaPortal" Identifier="MediaPortal">
+            gAIpLg==
+        </Plugin>
+        <Plugin File="DesktopRemote" Identifier="DesktopRemote">
+            gAIpLg==
+        </Plugin>
+        <Plugin File="WMPlayer" Identifier="WMPlayer">
+            gAIpLg==
+        </Plugin>
+        <Plugin File="SysTrayMenu" Identifier="SysTrayMenu">
+            gAJdcQAoKFgJAAAALS0tLS0tLS0tcQFVCXNlcGFyYXRvcnECWAAAAABxA0sLdHEEKFgIAAAAVFYgUG93ZXJxBVUEaXRlbXEGWBMAAABNY2VSZW1vdGUuTWNlLlBvd2VycQdLAXRxCChYCQAAAFllcyBQb3dlcnEJVQRpdGVtcQpYCwAAAFllcy5Qb3dlck9ucQtLCHRxDChYCQAAAC0tLS0tLS0tLXENVQlzZXBhcmF0b3JxDmgDSwJ0cQ8oWCEAAABUViBPTiAtPiBBViAtPiBwb3dlciBZRVMgLT4gY2ggMTBxEGgGWBEAAABDb21ib3MuUG93ZXJUVisxMHERSwN0cRIoWCEAAABUViBPTiAtPiBBViAtPiBwb3dlciBZRVMgLT4gY2ggMjJxE2gGWBEAAABDb21ib3MuUG93ZXJUVisyMnEUSwR0cRUoWCUAAABIRE1JIC0+IFBvd2VyIE9mZiBUViAtPiBQb3dlciBPZmYgWWVzcRZVBGl0ZW1xF1gjAAAAQ29tYm9zLlJldHVybi10by1oZG1pK3Bvd2VyLW9mZi1hbGxxGEsOdHEZKFgJAAAALS0tLS0tLS0tcRpoAmgDSwV0cRsoWAUAAABDaCAxMHEcaApYCQAAAENvbWJvcy4xMHEdSwd0cR4oWAUAAABDaCAyMnEfaApYCQAAAENvbWJvcy4yMnEgSwZ0cSEoWAUAAABDaCA1NnEiaBdYCQAAAENvbWJvcy41NnEjSw10cSQoWAkAAAAtLS0tLS0tLS1xJVUJc2VwYXJhdG9ycSZoA0sPdHEnKFgNAAAAWWVzIFZvbCArICogNXEoVQRpdGVtcSlYDQAAAENvbWJvcy41KnZvbCtxKksQdHErKFgNAAAAWWVzIFZvbCAtICogNXEsaClYDQAAAENvbWJvcy41KnZvbC1xLUsRdHEuKFgPAAAAWWVzIFRvZ2dsZSBNdXRlcS9oKVgIAAAAWWVzLk11dGVxMEsSdHExKFgJAAAALS0tLS0tLS0tcTJoAmgDSwl0cTMoWAsAAABBViA8LT4gSERNSXE0aApYEwAAAE1haW4udG9nZ2xlIGhkbWktdHZxNUsKdHE2KFgJAAAALS0tLS0tLS0tcTdoAmgDSwx0cThlhXE5Lg==
+        </Plugin>
+        <Plugin File="DirectoryWatcher" Identifier="DirectoryWatcher">
+            gAJYEAAAAEU6XFRFTVBcQ29tcGxldGVxAIiGcQEu
+        </Plugin>
+        <Plugin File="Keyboard" Identifier="Keyboard">
+            gAIpLg==
+        </Plugin>
+        <Plugin Enabled="False" File="XBMC" Identifier="XBMC">
+            gAIpLg==
+        </Plugin>
+    </Autostart>
+    <Folder Name="NumPad control Yes" id="11" Enabled="False">
+        <Macro Name="Cursor Up">
+            <Event Name="Keyboard.Up+U00" />
+            <Event Name="Keyboard.Up" />
+            <Action>
+                EventGhost.TriggerEvent(u'DesktopRemote.Up', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Cursor Down">
+            <Event Name="Keyboard.Down" />
+            <Event Name="Keyboard.Down+U00" />
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'DesktopRemote.Down', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Cursor Left">
+            <Event Name="Keyboard.Left" />
+            <Event Name="Keyboard.Left+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'DesktopRemote.Left', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Cursor Right">
+            <Event Name="Keyboard.Right" />
+            <Event Name="Keyboard.Right+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'DesktopRemote.Right', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Ok">
+            <Event Name="Keyboard.Return" />
+            <Event Name="Keyboard.U00+Return" />
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Yes', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Back">
+            <Event Name="Keyboard.Backspace" />
+            <Event Name="Keyboard.Backspace+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'DesktopRemote.Back-yes', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 0">
+            <Event Name="Keyboard.Numpad0" />
+            <Event Name="Keyboard.Numpad0+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.0', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 1">
+            <Event Name="Keyboard.Numpad1" />
+            <Event Name="Keyboard.Numpad1+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.1', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 2">
+            <Event Name="Keyboard.Numpad2" />
+            <Event Name="Keyboard.Numpad2+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 3">
+            <Event Name="Keyboard.Numpad3" />
+            <Event Name="Keyboard.Numpad3+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.3', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 4">
+            <Event Name="Keyboard.Numpad4" />
+            <Event Name="Keyboard.Numpad4+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.4', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 5">
+            <Event Name="Keyboard.Numpad5" />
+            <Event Name="Keyboard.Numpad5+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.5', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 6">
+            <Event Name="Keyboard.Numpad6" />
+            <Event Name="Keyboard.Numpad6+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.6', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 7">
+            <Event Name="Keyboard.Numpad7" />
+            <Event Name="Keyboard.Numpad7+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.7', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 8">
+            <Event Name="Keyboard.Numpad8" />
+            <Event Name="Keyboard.Numpad8+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.8', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="NumPad 9">
+            <Event Name="Keyboard.Numpad9" />
+            <Event Name="Keyboard.Numpad9+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.9', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="?">
+            <Event Name="Keyboard.Divide" />
+            <Event Name="Keyboard.Divide+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.?', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="info">
+            <Event Name="Keyboard.Multiply" />
+            <Event Name="Keyboard.Multiply+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Info', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Volume Up">
+            <Event Name="Keyboard.Add" />
+            <Event Name="Keyboard.Add+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Volume Down">
+            <Event Name="Keyboard.Subtract" />
+            <Event Name="Keyboard.Subtract+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Mute">
+            <Event Name="Keyboard.Pause" />
+            <Event Name="Keyboard.Pause+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Mute', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Power On Yes by Insert">
+            <Event Name="Keyboard.Insert" />
+            <Event Name="Keyboard.Insert+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.PowerOn', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Power On TV by F12">
+            <Event Name="Keyboard.F12" />
+            <Event Name="Keyboard.F12+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'DesktopRemote.TV', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Toggle HDMI-AV by F11">
+            <Event Name="Keyboard.F11" />
+            <Event Name="Keyboard.F11+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Main.toggle hdmi-tv', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="One AV/TV by F10">
+            <Event Name="Keyboard.F10" />
+            <Event Name="Keyboard.F10+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'MceRemote.Mce.Red', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Ch+ by PageUp">
+            <Event Name="Keyboard.PageUp+U00" />
+            <Event Name="Keyboard.PageUp" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Ch+', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Ch- by PageDown">
+            <Event Name="Keyboard.PageDown" />
+            <Event Name="Keyboard.PageDown+U00" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Ch-', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Show Help by ?">
+            <Event Name="Keyboard.RShift+Oem2" />
+            <Event Name="Keyboard.RShift+Oem2+U00" />
+            <Action>
+                EventGhost.ShowOSD(u'                           Shortcuts Help \n=========================================\n------------------------------------------------------------------------\n? = This Help\nEsc = Exit this Help\n------------------------------------------------------------------------\nKeypad = up/down/right/left\nEnter = Yes\nBackspace = back\nNumpads = Yes Numbers\n/ = Yes ?\n* = Yes Info (+)\n+ = Yes Vol UP\n- = Yes Vol Down\nPageUp/PageDown = Yes Channel Up/Down\nPause = Mute\n------------------------------------------------------------------------\nF10 = AV/TV\nF11 = Toggle HDMI-TV\nF12 = Power TV\nInsert = Power Yes\n------------------------------------------------------------------------\n=========================================\n', u'0;-24;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (255, 255, 255), 5, (0, 65), 1, 0.0, True)
+            </Action>
+        </Macro>
+        <Macro Name="Hide Help by Esc">
+            <Event Name="Keyboard.Escape" />
+            <Event Name="Keyboard.Escape+U00" />
+            <Action>
+                EventGhost.ShowOSD(u'la la la la la la\n\n\nla la la la aaaaaaaaaaaaaaaaaaaaaa', u'0;-24;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (255, 255, 255), 5, (0, 65), 1, 0.01, True)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="torrent handling" Expanded="True">
+        <Macro Name="unrar new torrents and move the the series folder" Expanded="True">
+            <Event Name="DirectoryWatcher.Created" />
+            <Action Name="unraring the last modified dir">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import os\nimport datetime\n#----------------------------------------------------------------------------------#\n# start logging\nlog_file="E:\\\\auto-extractor-log.txt"\nlogfile = open(log_file, \'a\')\n\nnow = datetime.datetime.now()\nnow_string = now.strftime("%Y-%m-%d %H:%M:%S")\n\nlogfile.write(now_string + " new directory found in completed directory\\n")\n#----------------------------------------------------------------------------------#\n\n# return an array contains each line for the file in cell\ndef file_to_array(file_path):\n\tfile=open(file_path,\'r\')\n\tfirst_line=file.readline()\n\tfirst_line=first_line.rstrip(\'\\n\')\n\tarray=[first_line]\n\tfor line in file.readlines():\n\t\tarray.append(line.rstrip(\'\\n\'))\n\t\n\tfile.close()\n\treturn array\n\n\t\n\nsource_dir = "E:\\TEMP\\Complete"\ndest_dir = "E:\\\\TEMP\\\\Unsorted"\nfiles=os.listdir(source_dir)\n\nrar_files_list_file="E:\\\\TEMP\\\\done_list.txt"\nrared_files_list=file_to_array(rar_files_list_file)\n\nfor file in files:\n    if(rared_files_list.count(file) == 0):\n        file_full_path=os.path.join(source_dir,file)\n        str_to_run="c:\\unrar.exe.lnk e -y " + file_full_path + " " + dest_dir\n        os.system(str_to_run)\n        \n        # end logging\n        now = datetime.datetime.now()\n        now_string = now.strftime("%Y-%m-%d %H:%M:%S")\n        logfile.write(now_string + " the command:\\n   " + str_to_run + "\\nwas run to extract the directory." + "\\n")\n        \n        # write to done file that another file is done :\n        rars_file=open(rar_files_list_file,\'a\')\n        rars_file.write(file+\'\\n\')\n        rars_file.close()\n\nlogfile.close()\n#----------------------------------#\n')
+            </Action>
+            <Action Name="moving the unrared file to its series dir">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import os\nimport string\nimport shutil\nimport datetime\nimport sys\n\n\n#----------------------------------------------------------------------------------#\n# start logging\nlog_file="E:\\\\auto-extractor-log.txt"\nlogfile = open(log_file, \'a\')\n\nnow = datetime.datetime.now()\nnow_string = now.strftime("%Y-%m-%d %H:%M:%S")\nlogfile.write("-----------------------------------------------------------------------------------------------------------------\\n")\n\nlogfile.write(now_string + " new file found in unsorted directory\\n")\n#----------------------------------------------------------------------------------#\n\n\n#--------------------------------------------------------------#\n# building the string for the path of source file to move \nsource_dir = "E:\\TEMP\\Unsorted"\ntry:\n    episode = os.listdir(source_dir)[0]\nexcept IndexError:\n    logfile.write(now_string + " there is no file in the unsorted dir, maybe unrar was unsuccessful - exiting\\n")\n    logfile.write("=================================================================================================================\\n")\n    logfile.close()\n    sys.exit()\n\nsource_file = source_dir + "\\\\" + episode\n\n#--------------------------------------------------------------#\n\n#------------------------------------------------------------------------------------------------------#\n# building the string for the path of the dest folder to move the source file into\n\nseries_base_dir = "E:\\TV Series"\n\ndest_series_with_dots = episode[:episode.rfind(\'.S\')]\ndest_series_without_dots = dest_series_with_dots.replace("."," ")\ndest_series_dir = series_base_dir + \'\\\\\' + dest_series_without_dots\n\n# check if the dir really exist ( parsing succedded )\ntry:\n    os.chdir(dest_series_dir)\nexcept:\n    # ok , so we will try to parse with lower case \'s\'\n    dest_series_with_dots = episode[:episode.rfind(\'.s\')]\n    dest_series_without_dots = dest_series_with_dots.replace("."," ")\n    dest_series_dir = series_base_dir + \'\\\\\' + dest_series_without_dots\n    try:\n        os.chdir(dest_series_dir)\n    except:\n        no_match_dir="E:\\\\TEMP\\\\no_match"\n        logfile.write("parse error - there is no dir named " + dest_series_dir +"\\n")\n        logfile.write("moving the file to " + no_match_dir + " directory in order to stay with clean unsorted dir\\n")\n        shutil.move(source_file,no_match_dir)\n        logfile.write("=================================================================================================================\\n")\n        logfile.close()\n        sys.exit()\n \n\n\n# returns the last in the array sorted alphbeticly, i.e : season 5 is after season 2 alphbeticlly. \n# pop gives the last value in the array .\n\nlatest_season_dir=os.listdir(dest_series_dir).pop()\ndest_dir=dest_series_dir + "\\\\" + latest_season_dir\n#------------------------------------------------------------------------------------------------------#\n\n\n#----------------------------------#\n# moving the file\ntry:\n    shutil.move(source_file,dest_dir)\nexcept:\n    logfile.write("the file:\\n   " + source_file + "\\ncould not be moved to the directory:\\n   "+ dest_dir + "\\n")\n    logfile.write("maybe already exists there?\\n")\n    os.remove(source_file)\n    logfile.write("the file has been removed ( rar files still there in completed dir... )\\n")\n    logfile.write("=================================================================================================================\\n")\n    logfile.close()\n    sys.exit()\n\n#----------------------------------#\n# end logging\nnow = datetime.datetime.now()\nnow_string = now.strftime("%Y-%m-%d %H:%M:%S")\nlogfile.write(now_string + " the file:\\n   " + source_file + "\\nwas moved to directory:\\n   " + dest_dir + "\\n")\nlogfile.write("=================================================================================================================\\n")\nlogfile.close()')
+            </Action>
+        </Macro>
+        <Macro Name="clean the complete list whenever the complete dir is empty">
+            <Event Name="DirectoryWatcher.Deleted" />
+            <Action Name="check if the complete dir is empty - if so - clean the complete list file">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'import os\nimport datetime\n#----------------------------------------------------------------------------------#\n\nsource_dir = "E:\\TEMP\\Complete"\nfiles=os.listdir(source_dir)\n\nif (files.__len__()==0):\n    rar_files_list_file="E:\\\\TEMP\\\\done_list.txt"\n    # openning the file for writing and closing it causes the file to be empty: \n    open(rar_files_list_file,\'w\').close()\n    log_file="E:\\\\auto-extractor-log.txt"\n    logfile = open(log_file, \'a\')\n    now = datetime.datetime.now()\n    now_string = now.strftime("%Y-%m-%d %H:%M:%S")\n    logfile.write(now_string + " complete dir is empty \\n   cleaning the done_list file\\n")\n    logfile.write("=================================================================================================================\\n")\n    logfile.close()\n\n#----------------------------------#\n')
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="TV Commands">
+        <Macro Name="hdmi to tv (av) and vice versa by toggle-tv-hdmi event - 5 blasts">
+            <Event Name="Main.toggle hdmi-tv" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="PowerOn" Expanded="True">
+            <Event Name="Keyboard.F7+U00" />
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0026 014D 00A5 0016 0014 0016 0014 0016 0013 0016 0014 0016 0013 0018 0013 0016 003D 0016 0014 0016 003B 0016 003D 0016 003D 0016 003D 0016 003B 0016 003D 0016 0014 0016 003B 0016 0014 0016 003D 0016 0013 0018 0013 0016 003D 0016 0013 0018 0013 0016 0014 0016 003D 0016 0013 0016 003D 0016 003D 0016 0013 0016 003D 0016 003D 0016 003D 0016 05C1 014F 0051 0016 0DE1 014F 0051 0016 0E75', 0)
+            </Action>
+        </Macro>
+        <Macro Name="turn off monitor" Expanded="True">
+            <Event Name="MceRemote.Mce.Pound" />
+            <Action>
+                System.MonitorPowerOff()
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Yes Commands">
+        <Macro Name="Power On ">
+            <Event Name="Yes.PowerOn" />
+            <Event Name="DesktopRemote.YES - POWER" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="Yes-Vol+" Expanded="True">
+            <Event Name="MceRemote.Mce.Forward" />
+            <Event Name="Yes.Vol+" />
+            <Event Name="DesktopRemote.desk.VolumeUp" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 0150 00A4 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 003E 0016 003C 0016 0015 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003E 0015 0015 0016 003E 0015 003E 0016 061D 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="Yes-Vol-" Expanded="True">
+            <Event Name="Yes.Vol-" />
+            <Event Name="DesktopRemote.VolumeDown" />
+            <Event Name="MceRemote.Mce.Rewind" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003E 0015 003E 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 003C 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="Yes-Mute">
+            <Event Name="Yes.Mute" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0013 0016 003E 0016 0015 0015 0015 0016 003E 0015 0015 0016 0013 0016 0015 0015 003E 0016 0015 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="0">
+            <Event Name="Yes.0" />
+            <Event Name="DesktopRemote.Num0" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0015 003E 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="1">
+            <Event Name="Yes.1" />
+            <Event Name="DesktopRemote.Num1" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006E 0000 0026 0151 00A8 0017 0015 0015 0015 0017 003E 0017 0013 0017 0013 0017 0015 0015 0015 0017 003E 0017 0013 0017 0013 0017 003E 0017 003E 0017 003C 0017 003E 0017 0013 0017 0015 0017 0013 0017 0013 0017 0015 0017 0013 0017 003E 0017 003C 0017 0015 0017 0013 0017 003E 0017 003E 0015 003E 0017 003E 0017 0013 0017 0015 0017 003C 0017 003E 0017 062B 0151 0055 0015 0E11 0151 0055 0017 0EB8', 0)
+            </Action>
+        </Macro>
+        <Macro Name="2">
+            <Event Name="Yes.2" />
+            <Event Name="DesktopRemote.Num2" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 003E 0015 0015 0016 003E 0016 0013 0016 0013 0016 0015 0016 003C 0016 003E 0016 0013 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="3">
+            <Event Name="Yes.3" />
+            <Event Name="DesktopRemote.Num3" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003E 0015 003E 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 0015 0016 003C 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="4">
+            <Event Name="Yes.4" />
+            <Event Name="DesktopRemote.Num4" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="5">
+            <Event Name="Yes.5" />
+            <Event Name="DesktopRemote.Num5" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0015 0015 003E 0016 0015 0015 0015 0016 0013 0016 0015 0015 003E 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 003E 0015 003E 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="6">
+            <Event Name="Yes.6" />
+            <Event Name="DesktopRemote.Num6" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 0150 00A4 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 0013 0016 0015 0015 003E 0016 003E 0016 003E 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 0013 0016 0015 0015 0015 0016 003E 0016 003C 0016 061D 0150 0052 0016 0DEE 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="7">
+            <Event Name="Yes.7" />
+            <Event Name="DesktopRemote.Num7" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 0150 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 003E 0015 0015 0016 0013 0016 0015 0015 003E 0016 0015 0016 0013 0016 003E 0016 003C 0016 0015 0016 0013 0016 003E 0016 0013 0016 003E 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 061D 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="8">
+            <Event Name="Yes.8" />
+            <Event Name="DesktopRemote.Num8" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 003E 0015 003E 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 003E 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 0015 0016 003C 0016 0015 0016 003C 0016 0015 0016 003C 0016 003E 0016 061D 0150 0052 0016 0DEE 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="9">
+            <Event Name="Yes.9" />
+            <Event Name="DesktopRemote.Num9" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003E 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 0013 0016 003E 0016 003C 0016 003E 0016 0015 0015 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="Yes">
+            <Event Name="Yes.Yes" />
+            <Event Name="DesktopRemote.yes" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006E 0000 0026 0151 00A8 0017 0013 0017 0013 0017 003E 0017 0013 0017 0015 0017 0013 0017 0013 0017 003E 0017 0013 0017 0015 0017 003C 0017 003E 0017 003E 0017 003E 0017 0013 0017 0013 0017 003E 0017 003E 0017 0013 0017 0013 0017 0015 0017 003C 0017 0015 0017 0013 0017 0013 0017 0015 0017 003C 0017 003E 0017 003E 0017 0013 0017 003E 0017 003E 0015 062D 0151 0053 0017 0E11 0151 0053 0017 0EB8', 0)
+            </Action>
+        </Macro>
+        <Macro Name="&lt;">
+            <Event Name="DesktopRemote.Left" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006E 0000 0026 0151 00A8 0017 0013 0017 0013 0017 003E 0017 0015 0015 0015 0017 0013 0017 0015 0015 003E 0017 0015 0015 0015 0017 003E 0017 003C 0017 003E 0017 003E 0017 0013 0017 0013 0017 0015 0017 0013 0017 003E 0017 0013 0017 003E 0017 003C 0017 0015 0017 0013 0017 003E 0017 003C 0017 0015 0017 003E 0015 0015 0017 0013 0017 003E 0017 003E 0017 062B 0151 0053 0017 0E0F 0153 0053 0017 0EB8', 0)
+            </Action>
+        </Macro>
+        <Macro Name="&gt;">
+            <Event Name="DesktopRemote.Right" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 003E 0016 003E 0015 003E 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="^">
+            <Event Name="DesktopRemote.Up" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 003E 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="v">
+            <Event Name="DesktopRemote.Down" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 014E 00A6 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 003E 0015 003E 0016 003E 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="back">
+            <Event Name="DesktopRemote.Back-yes" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 0150 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 003C 0016 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 003E 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 003E 0016 003C 0016 061D 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="?">
+            <Event Name="DesktopRemote.?-yes" />
+            <Event Name="Yes.?" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 003E 0015 003E 0016 003E 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 003C 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 0015 0016 0013 0016 003E 0016 0013 0016 003E 0016 003E 0015 061D 0150 0052 0016 0DEE 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="info">
+            <Event Name="Yes.Info" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 0150 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 003E 0016 0013 0016 0013 0016 0015 0016 0013 0016 003E 0016 003C 0016 061D 0150 0052 0016 0DEE 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="Yes-Ch+">
+            <Event Name="Yes.Ch+" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0024 0150 00A6 0015 0015 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 003C 0016 0015 0016 0013 0016 003E 0016 0013 0016 003E 0016 0013 0016 003E 0016 003E 0015 0015 0016 0013 0016 0015 0015 003E 0016 0015 0015 003E 0016 0015 0016 0013 0016 003E 0016 003C 0016 061D 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="Yes-Ch-">
+            <Event Name="Yes.Ch-" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 0150 00A6 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 003E 0016 0013 0016 0015 0016 003C 0016 003E 0016 003E 0016 003E 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 0015 0016 003C 0016 003E 0016 0013 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 061D 0150 0052 0016 0DEE 0150 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="MCE Global Events">
+        <Macro Name="power ON TV by LiveTv  or Power">
+            <Event Name="MceRemote.Mce.LiveTV" />
+            <Event Name="MceRemote.Mce.Power" />
+            <Event Name="DesktopRemote.TV" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+        </Macro>
+        <Macro Name="tv/av one click by Red">
+            <Event Name="MceRemote.Mce.Red" />
+            <Event Name="DesktopRemote.AV" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="TV sleep by Pound" Enabled="False">
+            <Event Name="MceRemote.Mce.Pound" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014A 00A5 0016 0012 0016 0014 0014 0014 0016 0014 0014 0014 0016 0012 0018 0012 0016 0014 0014 003E 0014 003D 0018 003D 0014 003E 0014 003D 0018 003D 0014 003E 0014 0014 0016 0012 0016 0014 0016 0014 0014 0014 0016 003D 0016 0012 0016 003E 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 0012 0016 003E 0014 0014 0016 003D 0016 05E0 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="kill media portal by recordedTV">
+            <Event Name="MceRemote.Mce.Recorded_TV" />
+            <Action Name="Python Script for killing media portal">
+                EventGhost.PythonScript(u'import wmi\nimport win32api\nimport subprocess\nc = wmi.WMI ()\ntry:\n    for process in c.Win32_Process (caption="MediaPortal.exe"):\n        process.Terminate ()\nexcept win32api.error:\n\tprint "error"')
+            </Action>
+        </Macro>
+        <Macro Name="start mediaportal by Start">
+            <Event Name="MceRemote.Mce.Start" />
+            <Action>
+                System.Execute(u'C:\\Program Files\\Team MediaPortal\\MediaPortal\\MediaPortal.exe', u'', 0, False, 2, u'')
+            </Action>
+            <Action>
+                System.MonitorPowerOn()
+            </Action>
+        </Macro>
+        <Macro Name="alt + tab by Teletext">
+            <Event Name="MceRemote.Mce.Teletext" />
+            <Action>
+                Window.SendKeys(u'{Alt+Tabulator}', False)
+            </Action>
+        </Macro>
+        <Macro Name="fire toggle tv-hdmi action by Green">
+            <Event Name="MceRemote.Mce.Green" />
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name='emulate "A" by 2 - for adding a page to scanning.'>
+            <Event Name="MceRemote.Mce.Num2" />
+            <Action>
+                Window.SendKeys(u'A', False)
+            </Action>
+        </Macro>
+        <Macro Name="windows mute by Clear button">
+            <Event Name="MceRemote.Mce.Escape" />
+            <Action>
+                System.ToggleMute(0)
+            </Action>
+        </Macro>
+        <Macro Name="kill media player by Guide">
+            <Event Name="MceRemote.Mce.Guide" />
+            <Action>
+                Window.FindWindow(u'wmplayer.exe', None, None, None, None, None, False, 0.0, 0)
+            </Action>
+            <Action>
+                Window.Close()
+            </Action>
+        </Macro>
+        <Folder Name="Toggle yes remote and media portal remote">
+            <Macro Name="yes on" id="312" Enabled="False">
+                <Event Name="MceRemote.Mce.Record" />
+                <Action>
+                    EventGhost.EnableItem(XmlIdLink(496))
+                </Action>
+                <Action>
+                    EventGhost.DisableItem(XmlIdLink(323))
+                </Action>
+                <Action>
+                    EventGhost.EnableExclusive(XmlIdLink(317))
+                </Action>
+            </Macro>
+            <Macro Name="MP on" id="317">
+                <Event Name="MceRemote.Mce.Record" />
+                <Action>
+                    EventGhost.EnableItem(XmlIdLink(323))
+                </Action>
+                <Action>
+                    EventGhost.DisableItem(XmlIdLink(496))
+                </Action>
+                <Action>
+                    EventGhost.EnableExclusive(XmlIdLink(312))
+                </Action>
+            </Macro>
+        </Folder>
+    </Folder>
+    <Folder Name="MCE Features">
+        <Folder Name="MediaPortal" id="323" Enabled="False" Expanded="True">
+            <Macro Name="Cursor Up">
+                <Event Name="MceRemote.Mce.Up" />
+                <Action>
+                    MediaPortal.Up()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Cursor Down">
+                <Event Name="MceRemote.Mce.Down" />
+                <Action>
+                    MediaPortal.Down()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Cursor Left">
+                <Event Name="MceRemote.Mce.Left" />
+                <Action>
+                    MediaPortal.Left()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.5, 0.20000000000000001, 0.01, 2.0)
+                </Action>
+            </Macro>
+            <Macro Name="Cursor Right">
+                <Event Name="MceRemote.Mce.Right" />
+                <Action>
+                    MediaPortal.Right()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 2.0)
+                </Action>
+            </Macro>
+            <Macro Name="Ok">
+                <Event Name="MceRemote.Mce.Ok" />
+                <Action>
+                    MediaPortal.Ok()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Back">
+                <Event Name="MceRemote.Mce.Back" />
+                <Action>
+                    MediaPortal.Back()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 0">
+                <Event Name="MceRemote.Mce.Num0" />
+                <Action>
+                    MediaPortal.NumPad0()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 1">
+                <Event Name="MceRemote.Mce.Num1" />
+                <Action>
+                    MediaPortal.NumPad1()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 2">
+                <Event Name="MceRemote.Mce.Num2" />
+                <Action>
+                    MediaPortal.NumPad2()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 3">
+                <Event Name="MceRemote.Mce.Num3" />
+                <Action>
+                    MediaPortal.NumPad3()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 4">
+                <Event Name="MceRemote.Mce.Num4" />
+                <Action>
+                    MediaPortal.NumPad4()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 5">
+                <Event Name="MceRemote.Mce.Num5" />
+                <Action>
+                    MediaPortal.NumPad5()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 6">
+                <Event Name="MceRemote.Mce.Num6" />
+                <Action>
+                    MediaPortal.NumPad6()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 7">
+                <Event Name="MceRemote.Mce.Num7" />
+                <Action>
+                    MediaPortal.NumPad7()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 8">
+                <Event Name="MceRemote.Mce.Num8" />
+                <Action>
+                    MediaPortal.NumPad8()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 9">
+                <Event Name="MceRemote.Mce.Num9" />
+                <Action>
+                    MediaPortal.NumPad9()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Enter">
+                <Event Name="MceRemote.Mce.Enter" />
+                <Action>
+                    MediaPortal.Enter()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Power1">
+                <Action>
+                    MediaPortal.Power1()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Power2">
+                <Action>
+                    MediaPortal.Power2()
+                </Action>
+            </Macro>
+            <Macro Name="Start">
+                <Event Name="MceRemote.Mce.Start" />
+                <Action>
+                    MediaPortal.Start()
+                </Action>
+            </Macro>
+            <Macro Name="&lt;unnamed macro&gt;" />
+            <Macro Name="Info">
+                <Event Name="MceRemote.Mce.Details" />
+                <Action>
+                    MediaPortal.Info()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Volume Up">
+                <Event Name="MceRemote.Mce.VolumeUp" />
+                <Action>
+                    MediaPortal.VolumeUp()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Volume Down">
+                <Event Name="MceRemote.Mce.VolumeDown" />
+                <Action>
+                    MediaPortal.VolumeDown()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Mute">
+                <Event Name="MceRemote.Mce.Mute" />
+                <Action>
+                    MediaPortal.Mute()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Forward">
+                <Event Name="MceRemote.Mce.Forward" />
+                <Action>
+                    MediaPortal.Forward()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Rewind">
+                <Event Name="MceRemote.Mce.Rewind" />
+                <Action>
+                    MediaPortal.Rewind()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Play">
+                <Event Name="MceRemote.Mce.Play" />
+                <Action>
+                    MediaPortal.Play()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Record">
+                <Action>
+                    MediaPortal.Record()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Pause">
+                <Event Name="MceRemote.Mce.Pause" />
+                <Action>
+                    MediaPortal.Pause()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Stop">
+                <Event Name="MceRemote.Mce.Stop" />
+                <Action>
+                    MediaPortal.Stop()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Skip">
+                <Event Name="MceRemote.Mce.Skip" />
+                <Action>
+                    MediaPortal.Skip()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Replay">
+                <Event Name="MceRemote.Mce.Replay" />
+                <Action>
+                    MediaPortal.Replay()
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="OemGate">
+                <Action>
+                    MediaPortal.OemGate()
+                </Action>
+            </Macro>
+            <Macro Name="Oem8">
+                <Action>
+                    MediaPortal.Oem8()
+                </Action>
+            </Macro>
+            <Macro Name="DVDMenu">
+                <Action>
+                    MediaPortal.DVDMenu()
+                </Action>
+            </Macro>
+            <Macro Name="LiveTV">
+                <Action>
+                    MediaPortal.LiveTV()
+                </Action>
+            </Macro>
+            <Macro Name="Guide">
+                <Action>
+                    MediaPortal.Guide()
+                </Action>
+            </Macro>
+            <Macro Name="AspectRatio">
+                <Action>
+                    MediaPortal.AspectRatio()
+                </Action>
+            </Macro>
+            <Macro Name="MyTV">
+                <Action>
+                    MediaPortal.MyTV()
+                </Action>
+            </Macro>
+            <Macro Name="MyMusic">
+                <Action>
+                    MediaPortal.MyMusic()
+                </Action>
+            </Macro>
+            <Macro Name="RecordedTV">
+                <Action>
+                    MediaPortal.RecordedTV()
+                </Action>
+            </Macro>
+            <Macro Name="MyPictures">
+                <Action>
+                    MediaPortal.MyPictures()
+                </Action>
+            </Macro>
+            <Macro Name="MyVideos">
+                <Action>
+                    MediaPortal.MyVideos()
+                </Action>
+            </Macro>
+            <Macro Name="Print">
+                <Action>
+                    MediaPortal.Print()
+                </Action>
+            </Macro>
+            <Macro Name="MyRadio">
+                <Action>
+                    MediaPortal.MyRadio()
+                </Action>
+            </Macro>
+            <Macro Name="Teletext">
+                <Action>
+                    MediaPortal.Teletext()
+                </Action>
+            </Macro>
+            <Macro Name="Red">
+                <Action>
+                    MediaPortal.Red()
+                </Action>
+            </Macro>
+            <Macro Name="Green">
+                <Action>
+                    MediaPortal.Green()
+                </Action>
+            </Macro>
+            <Macro Name="Yellow">
+                <Action>
+                    MediaPortal.Yellow()
+                </Action>
+            </Macro>
+            <Macro Name="Blue">
+                <Action>
+                    MediaPortal.Blue()
+                </Action>
+            </Macro>
+            <Macro Name="PowerTV">
+                <Action>
+                    MediaPortal.PowerTV()
+                </Action>
+            </Macro>
+            <Macro Name="Messenger">
+                <Action>
+                    MediaPortal.Messenger()
+                </Action>
+            </Macro>
+            <Macro Name="ch - = computer vol-" Expanded="True">
+                <Event Name="MceRemote.Mce.ChannelDown" />
+                <Action>
+                    System.ChangeMasterVolumeBy(-3.0, 0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.070000000000000007, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="ch + = computer vol+" Expanded="True">
+                <Event Name="MceRemote.Mce.ChannelUp" />
+                <Action>
+                    System.ChangeMasterVolumeBy(3.0, 0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.070000000000000007, 3.0)
+                </Action>
+            </Macro>
+        </Folder>
+        <Folder Name="MCE Yes" id="496">
+            <Macro Name="Cursor Up">
+                <Event Name="MceRemote.Mce.Up" />
+                <Action>
+                    EventGhost.TriggerEvent(u'DesktopRemote.Up', 0.0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Cursor Down">
+                <Event Name="MceRemote.Mce.Down" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'DesktopRemote.Down', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Cursor Left">
+                <Event Name="MceRemote.Mce.Left" />
+                <Action>
+                    EventGhost.AutoRepeat(0.5, 0.20000000000000001, 0.01, 2.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'DesktopRemote.Left', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Cursor Right">
+                <Event Name="MceRemote.Mce.Right" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 2.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'DesktopRemote.Right', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Ok">
+                <Event Name="MceRemote.Mce.Ok" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Yes', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Back">
+                <Event Name="MceRemote.Mce.Back" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'DesktopRemote.Back-yes', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 0">
+                <Event Name="MceRemote.Mce.Num0" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.0', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 1">
+                <Event Name="MceRemote.Mce.Num1" />
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.1', 0.0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 2">
+                <Event Name="MceRemote.Mce.Num2" />
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.2', 0.0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 3">
+                <Event Name="MceRemote.Mce.Num3" />
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.3', 0.0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 4">
+                <Event Name="MceRemote.Mce.Num4" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.4', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 5">
+                <Event Name="MceRemote.Mce.Num5" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.5', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 6">
+                <Event Name="MceRemote.Mce.Num6" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.6', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 7">
+                <Event Name="MceRemote.Mce.Num7" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.7', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 8">
+                <Event Name="MceRemote.Mce.Num8" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.8', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad 9">
+                <Event Name="MceRemote.Mce.Num9" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.9', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="?">
+                <Event Name="MceRemote.Mce.Details" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.?', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="info">
+                <Event Name="MceRemote.Mce.Skip" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Info', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Volume Up">
+                <Event Name="MceRemote.Mce.VolumeUp" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Volume Down">
+                <Event Name="MceRemote.Mce.VolumeDown" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="Mute">
+                <Event Name="MceRemote.Mce.Mute" />
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Mute', 0.0)
+                </Action>
+            </Macro>
+            <Macro Name="ch + = computer vol+">
+                <Event Name="MceRemote.Mce.ChannelUp" />
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Ch+', 0.0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="ch - = computer vol-">
+                <Event Name="MceRemote.Mce.ChannelDown" />
+                <Action>
+                    EventGhost.TriggerEvent(u'Yes.Ch-', 0.0)
+                </Action>
+                <Action>
+                    EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+                </Action>
+            </Macro>
+        </Folder>
+    </Folder>
+    <Folder Name="Logitech Wave">
+        <Folder Name="Toggle NumPad control On and Off">
+            <Macro Name="NumPad Control On" id="591">
+                <Event Name="Main.Toggle-NumPad-Control" />
+                <Action>
+                    EventGhost.EnableItem(XmlIdLink(11))
+                </Action>
+                <Action>
+                    EventGhost.EnableExclusive(XmlIdLink(596))
+                </Action>
+                <Action>
+                    EventGhost.ShowOSD(u'NumPad Control ON', u'0;-24;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (255, 255, 255), 5, (0, 65), 1, 3.0, True)
+                </Action>
+            </Macro>
+            <Macro Name="NumPad Control Off" id="596" Enabled="False">
+                <Event Name="Main.Toggle-NumPad-Control" />
+                <Action>
+                    EventGhost.DisableItem(XmlIdLink(11))
+                </Action>
+                <Action>
+                    EventGhost.EnableExclusive(XmlIdLink(591))
+                </Action>
+                <Action>
+                    EventGhost.ShowOSD(u'NumPad Control OFF', u'0;-24;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (255, 255, 255), 5, (0, 65), 1, 3.0, True)
+                </Action>
+            </Macro>
+        </Folder>
+    </Folder>
+    <Folder Name="Combos">
+        <Macro Name="Power On TV , go to av , power on yes , go to ch 10">
+            <Event Name="Combos.PowerTV+10" />
+            <Action Name="power on TV">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(20.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+            <Action Name="power on Yes">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(3.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.1', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.0', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="Power On TV , go to av , power on yes , go to ch 22">
+            <Event Name="Combos.PowerTV+22" />
+            <Action Name="power on TV">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(20.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+            <Action Name="power on Yes">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+            <Action>
+                EventGhost.Wait(3.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="go to hdmi ,Power Off TV, power Off yes">
+            <Event Name="Combos.Return-to-hdmi+power-off-all" />
+            <Action>
+                EventGhost.TriggerEvent(u'toggle hdmi-tv', 0.0)
+            </Action>
+            <Action Name="power off TV">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0070 0000 0025 014F 00A5 0016 0014 0014 0014 0016 0014 0016 0013 0016 0014 0016 0013 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 0014 0016 003D 0016 0014 0016 003D 0014 0014 0016 0014 0014 0014 0016 0014 0016 003D 0014 0014 0016 003D 0016 0014 0016 003D 0014 003F 0014 003F 0016 003D 0014 05EF 014F 0051 0016 0DE5 0009 0E75', 0)
+            </Action>
+            <Action Name="power off Yes">
+                EventGhost.Comment()
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 006F 0000 0026 014E 00A6 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 0013 0016 0015 0016 003C 0016 0015 0016 0013 0016 003E 0016 003C 0016 003E 0016 003E 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 0013 0016 003E 0016 0015 0015 0015 0016 0013 0016 003E 0016 003E 0016 003C 0016 003E 0016 0013 0016 003E 0016 003E 0016 061D 014E 0052 0016 0DF0 014E 0052 0016 0E96', 0)
+            </Action>
+        </Macro>
+        <Macro Name="go to ch 10">
+            <Event Name="Combos.10" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.1', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.0', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="go to ch 22">
+            <Event Name="Combos.22" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.2', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="go to ch 56">
+            <Event Name="Combos.56" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.5', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.6', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="one av/tv">
+            <Event Name="Combos.ONE_AV" />
+            <Action>
+                EventGhost.Wait(0.29999999999999999)
+            </Action>
+            <Action>
+                MCE_Vista.TransmitIR(u'0000 0071 0000 0024 014C 00A3 0016 0014 0014 0014 0016 0014 0016 0012 0016 0014 0016 0012 0016 0014 0014 0014 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 003D 0016 0014 0014 003E 0014 003E 0016 0012 0016 0014 0014 003E 0014 0014 0016 003D 0016 0014 0014 0014 0016 0014 0014 003E 0016 003D 0014 0014 0016 003D 0016 0012 0018 003D 0014 05E2 014C 0051 0016 0E54', 0)
+            </Action>
+        </Macro>
+        <Macro Name="vol + * 5">
+            <Event Name="Combos.5*vol+" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol+', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="vol - * 5">
+            <Event Name="Combos.5*vol-" />
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+            <Action>
+                EventGhost.TriggerEvent(u'Yes.Vol-', 0.0)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Windows Desktop ShortCuts Macro">
+        <Macro Name="TV-ON">
+            <Event Name="Main.TVON" />
+            <Action>
+                EventGhost.TriggerEvent(u'MceRemote.Mce.Power', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="TV-10">
+            <Event Name="Main.TV-10" />
+            <Action>
+                EventGhost.TriggerEvent(u'Combos.PowerTV+10', 0.0)
+            </Action>
+        </Macro>
+        <Macro Name="TV-22">
+            <Event Name="Main.TV-22" />
+            <Action>
+                EventGhost.TriggerEvent(u'Combos.PowerTV+22', 0.0)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Desk Remote">
+        <Macro Name="Desktop Remote: CreateNew">
+            <Event Name="DesktopRemote.go" />
+            <Action>
+                DesktopRemote.CreateNew(40, 40, 6, 6, 4, (192, 192, 192), (255, 255, 255), (78, 78, 78), u'0;-12;0;0;0;700;0;0;0;0;3;2;1;34;Arial', u'Remote', 1, True, True, True)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'backgroundColour': (255, 255, 255), 'foregroundColour': (0, 0, 0), 'event': u'TV', 'label': u'TV '})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'backgroundColour': (255, 255, 255), 'foregroundColour': (0, 0, 0), 'event': u'YES - POWER', 'label': u'YES'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(12)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num1', 'label': u'1'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num2', 'label': u'2'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num3', 'label': u'3'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num4', 'label': u'4'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num5', 'label': u'5'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num6', 'label': u'6'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num7', 'label': u'7'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num8', 'label': u'8'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num9', 'label': u'9'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Num0', 'label': u'0'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(12)
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(12)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'image': 'iVBORw0KGgoAAAANSUhEUgAAAA4AAAAKCAIAAAALu/iQAAAABnRSTlMAwADAAMCNeLu6AAAAPElEQVR42mM8cOAAAyqwt7dnYGA4ePAgmjgTVnXIDOxK0aTRuEy4JDAFmfCoQ5NigVDIniDWW3jAgCsFAJoWEIGg8nNNAAAAAElFTkSuQmCC', 'event': u'Up', 'label': u'Up'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'image': 'iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOCAIAAACZwRr8AAAABnRSTlMAwADAAMCNeLu6AAAASUlEQVR42p2OwQ3AIAwDTcReWT2eLHyQ2kJMJfzMOSe3iICO4ZgPdneJd/bgkk2sGICWmffLO8m3nOT6vZwKuWqY0hbT9sbP8gGO3xad6inhAgAAAABJRU5ErkJggg==', 'event': u'Left', 'label': u'Left'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'yes', 'label': u'Yes'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'image': 'iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOCAIAAACZwRr8AAAABnRSTlMAwADAAMCNeLu6AAAARUlEQVR42p2OyQkAMAgEo6QvW3crMw8hSPCA7Hf2IlVdtXi1erGIDOnoyMuvo9x2B5nZ//MNoPoFoEx7jBuW4zjHDZufH9rQFp1xiD7kAAAAAElFTkSuQmCC', 'event': u'Right', 'label': u'Right'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'image': 'iVBORw0KGgoAAAANSUhEUgAAAA4AAAAKCAIAAAALu/iQAAAABnRSTlMAwADAAMCNeLu6AAAAQklEQVR42mM8cOAAAyqwt7dnYGA4ePAgmjgTA9FgwJWyIHsF03MQAPEiEzIHK4BLMWEKYVWH7lY01WhcJlzGYFoCAGFUGyvpIBBNAAAAAElFTkSuQmCC', 'event': u'Down', 'label': u'Down'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(12)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'Back-yes', 'label': u'&lt;-|'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'backgroundColour': (0, 0, 255), 'event': u'?-yes', 'label': u'?'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(12)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'desk.VolumeUp', 'label': u'V+'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'image': 'iVBORw0KGgoAAAANSUhEUgAAAA0AAAATCAIAAADEVRDAAAAABnRSTlMAwADAAMCNeLu6AAAAXUlEQVR42sXSQQ7AIAgEwG3Dv/br8DMPJg2BuHgrV8ZViI+7QxZJAO8NGtyHlNsoIpQrCIDl8FwZHfMKAmClcYof9vK7M/38Ia8fs76q7Ujmltrz1T8oVM0739vpAtrfJOh9am4lAAAAAElFTkSuQmCC', 'event': u'Yes.Mute', 'label': u'Mute'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'event': u'VolumeDown', 'label': u'V-'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'backgroundColour': (255, 0, 0), 'foregroundColour': (0, 0, 0), 'event': u'AV', 'label': u'AV'})
+            </Action>
+            <Action>
+                DesktopRemote.StartNewLine(0)
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'invisible': True, 'width': 15, 'event': u'VolumeDown', 'label': u'blank'})
+            </Action>
+            <Action>
+                DesktopRemote.AddButton({'backgroundColour': (255, 128, 64), 'width': 80, 'foregroundColour': (0, 0, 0), 'event': u'Main.toggle hdmi-tv', 'label': u'AV&lt;--&gt;HDMI'})
+            </Action>
+            <Action>
+                DesktopRemote.Show(1500, 0, False)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="XBMC" Enabled="False">
+        <Macro Name="Up">
+            <Event Name="MceRemote.Mce.Up" />
+            <Action>
+                Window.SendKeys(u'{Up}', False)
+            </Action>
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="Down">
+            <Event Name="MceRemote.Mce.Down" />
+            <Action>
+                Window.SendKeys(u'{Down}', False)
+            </Action>
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="Left">
+            <Event Name="MceRemote.Mce.Left" />
+            <Action>
+                Window.SendKeys(u'{Left}', False)
+            </Action>
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="Right">
+            <Event Name="MceRemote.Mce.Right" />
+            <Action>
+                Window.SendKeys(u'{Right}', False)
+            </Action>
+            <Action>
+                EventGhost.AutoRepeat(0.59999999999999998, 0.29999999999999999, 0.01, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="Page Up">
+            <Event Name="MceRemote.Mce.ChannelUp" />
+            <Action>
+                Window.SendKeys(u'{PageUp}', False)
+            </Action>
+        </Macro>
+        <Macro Name="Page Down">
+            <Event Name="MceRemote.Mce.ChannelDown" />
+            <Action>
+                Window.SendKeys(u'{PageDown}', False)
+            </Action>
+        </Macro>
+        <Macro Name="Select">
+            <Event Name="MceRemote.Mce.Ok" />
+            <Action>
+                Window.SendKeys(u'{Enter}', False)
+            </Action>
+        </Macro>
+        <Macro Name="Back">
+            <Event Name="MceRemote.Mce.Back" />
+            <Action>
+                Window.SendKeys(u'{Escape}', False)
+            </Action>
+        </Macro>
+        <Macro Name="Play">
+            <Event Name="MceRemote.Mce.Play" />
+            <Action>
+                Window.SendKeys(u'{Space}', False)
+            </Action>
+        </Macro>
+        <Macro Name="Pause">
+            <Event Name="MceRemote.Mce.Pause" />
+            <Action>
+                Window.SendKeys(u'{Space}', False)
+            </Action>
+        </Macro>
+        <Macro Name="Stop">
+            <Event Name="MceRemote.Mce.Stop" />
+            <Action>
+                Window.SendKeys(u'x', False)
+            </Action>
+        </Macro>
+        <Macro Name="Fast Forward">
+            <Event Name="MceRemote.Mce.Forward" />
+            <Action>
+                Window.SendKeys(u'&gt;', False)
+            </Action>
+        </Macro>
+        <Macro Name="Rewind">
+            <Event Name="MceRemote.Mce.Rewind" />
+            <Action>
+                Window.SendKeys(u'&lt;', False)
+            </Action>
+        </Macro>
+        <Macro Name="Skip Next">
+            <Event Name="MceRemote.Mce.Skip" />
+            <Action>
+                Window.SendKeys(u']', False)
+            </Action>
+        </Macro>
+        <Macro Name="Skip Previous">
+            <Event Name="MceRemote.Mce.Replay" />
+            <Action>
+                Window.SendKeys(u'[', False)
+            </Action>
+        </Macro>
+        <Macro Name="Zero">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Zero()')
+            </Action>
+        </Macro>
+        <Macro Name="One">
+            <Action>
+                EventGhost.PythonCommand('XBMC.One()')
+            </Action>
+        </Macro>
+        <Macro Name="Two">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Two()')
+            </Action>
+        </Macro>
+        <Macro Name="Three">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Three()')
+            </Action>
+        </Macro>
+        <Macro Name="Four">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Four()')
+            </Action>
+        </Macro>
+        <Macro Name="Five">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Five()')
+            </Action>
+        </Macro>
+        <Macro Name="Six">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Six()')
+            </Action>
+        </Macro>
+        <Macro Name="Seven">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Seven()')
+            </Action>
+        </Macro>
+        <Macro Name="Eight">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Eight()')
+            </Action>
+        </Macro>
+        <Macro Name="Nine">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Nine()')
+            </Action>
+        </Macro>
+        <Macro Name="Star">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Star()')
+            </Action>
+        </Macro>
+        <Macro Name="Hash">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Hash()')
+            </Action>
+        </Macro>
+        <Macro Name="Menu">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Menu()')
+            </Action>
+        </Macro>
+        <Macro Name="Display">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Display()')
+            </Action>
+        </Macro>
+        <Macro Name="Start">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Start()')
+            </Action>
+        </Macro>
+        <Macro Name="Title">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Title()')
+            </Action>
+        </Macro>
+        <Macro Name="Info">
+            <Action>
+                XBMC.Info()
+            </Action>
+        </Macro>
+        <Macro Name="Clear">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Clear()')
+            </Action>
+        </Macro>
+        <Macro Name="Power">
+            <Action>
+                EventGhost.PythonCommand('XBMC.Power()')
+            </Action>
+        </Macro>
+        <Macro Name="Eject Tray">
+            <Action>
+                XBMC.EjectTray()
+            </Action>
+        </Macro>
+        <Macro Name="Show Home Screen">
+            <Event Name="MceRemote.Mce.DVDMenu" />
+            <Action>
+                Window.SendKeys(u'h', False)
+            </Action>
+        </Macro>
+        <Macro Name="Show Videos Screen">
+            <Action>
+                XBMC.MyVideos()
+            </Action>
+        </Macro>
+        <Macro Name="Show Music Screen">
+            <Action>
+                XBMC.MyMusic()
+            </Action>
+        </Macro>
+        <Macro Name="Show Pictures Screen">
+            <Action>
+                XBMC.MyPictures()
+            </Action>
+        </Macro>
+        <Macro Name="Show Weather Screen">
+            <Action>
+                XBMC.Weather()
+            </Action>
+        </Macro>
+        <Macro Name="Show Settings Screen">
+            <Action>
+                XBMC.Settings()
+            </Action>
+        </Macro>
+        <Macro Name="Show Favorites Screen">
+            <Action>
+                XBMC.Favorites()
+            </Action>
+        </Macro>
+        <Macro Name="Show System Info Screen">
+            <Action>
+                XBMC.SystemInfo()
+            </Action>
+        </Macro>
+        <Macro Name="Show Shutdown Menu">
+            <Action>
+                XBMC.ShutdownMenu()
+            </Action>
+        </Macro>
+        <Macro Name="Reset Computer">
+            <Action>
+                XBMC.Reset()
+            </Action>
+        </Macro>
+        <Macro Name="Info">
+            <Event Name="MceRemote.Mce.Details" />
+            <Action>
+                Window.SendKeys(u'i', False)
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Windows Media Player" Enabled="False">
+        <Macro Name="Toggle Play">
+            <Event Name="MceRemote.Mce.Pause" />
+            <Event Name="MceRemote.Mce.Play" />
+            <Action>
+                WMPlayer.TogglePlay()
+            </Action>
+        </Macro>
+        <Macro Name="Stop">
+            <Event Name="MceRemote.Mce.Stop" />
+            <Action>
+                WMPlayer.Stop()
+            </Action>
+        </Macro>
+        <Macro Name="Previous Track">
+            <Event Name="MceRemote.Mce.Replay" />
+            <Action>
+                WMPlayer.PreviousTrack()
+            </Action>
+        </Macro>
+        <Macro Name="Next Track">
+            <Event Name="MceRemote.Mce.Skip" />
+            <Action>
+                WMPlayer.NextTrack()
+            </Action>
+        </Macro>
+        <Macro Name="Fast Forward">
+            <Action>
+                WMPlayer.FastForward()
+            </Action>
+        </Macro>
+        <Macro Name="Rewind">
+            <Action>
+                WMPlayer.FastRewind()
+            </Action>
+        </Macro>
+        <Macro Name="Volume Up">
+            <Event Name="MceRemote.Mce.VolumeUp" />
+            <Action>
+                WMPlayer.VolumeUp()
+            </Action>
+        </Macro>
+        <Macro Name="Volume Down">
+            <Event Name="MceRemote.Mce.VolumeDown" />
+            <Action>
+                WMPlayer.VolumeDown()
+            </Action>
+        </Macro>
+        <Macro Name="Toggle Mute">
+            <Event Name="MceRemote.Mce.Mute" />
+            <Action>
+                WMPlayer.ToggleMute()
+            </Action>
+        </Macro>
+        <Macro Name="Toggle Shuffle">
+            <Action>
+                WMPlayer.ToggleShuffle()
+            </Action>
+        </Macro>
+        <Macro Name="Toggle Repeat">
+            <Action>
+                WMPlayer.ToggleRepeat()
+            </Action>
+        </Macro>
+        <Macro Name="Now Playing">
+            <Action>
+                WMPlayer.NowPlaying()
+            </Action>
+        </Macro>
+        <Macro Name="Library">
+            <Action>
+                WMPlayer.Library()
+            </Action>
+        </Macro>
+        <Macro Name="Fullscreen">
+            <Event Name="MceRemote.Mce.Ok" />
+            <Action>
+                WMPlayer.Fullscreen()
+            </Action>
+        </Macro>
+        <Macro Name="Exit">
+            <Action>
+                WMPlayer.Exit()
+            </Action>
+        </Macro>
+    </Folder>
+    <Folder Name="Tests" Enabled="False">
+        <Macro Name="bb" Expanded="True">
+            <Event Name="Keyboard.U00" />
+            <Action>
+                EventGhost.PythonScript(u'x=eg.log.GetData(numLines=-1)\nevent_to_trig=x[-5][0]\n#eg.TriggerEvent(event_to_trig)\n\nbla="xxx"')
+            </Action>
+            <Action>
+                EventGhost.PythonScript(u'x=eg.log.GetData(numLines=-1)\nevent_to_trig=x[-5][0]\n#eg.TriggerEvent(event_to_trig)\n\nbla="xxx"')
+            </Action>
+        </Macro>
+    </Folder>
+</EventGhost>
